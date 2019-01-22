@@ -22,9 +22,11 @@ type Auth struct {
 // The token and related elements returned after a successful auth
 // by the Tesla API
 type Token struct {
-	AccessToken string `json:"access_token"`
-	TokenType   string `json:"token_type"`
-	ExpiresIn   int    `json:"expires_in"`
+	AccessToken  string `json:"access_token"`
+	TokenType    string `json:"token_type"`
+	ExpiresIn    int    `json:"expires_in"`
+	RefreshToken string `json:"refresh_token"`
+	CreatedAt    int    `json:"created_at"`
 }
 
 // Provides the client and associated elements for interacting with the
